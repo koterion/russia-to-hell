@@ -8,7 +8,7 @@ VERSION='2.1'
 TARGETS_URL='https://raw.githubusercontent.com/ValeryP/help-ukraine-win/main/web-ddos/public/targets.txt'
 
 function print_help {
-  echo -e "Usage: bash-mac.sh --mode install"
+  echo -e "Usage: bash ddos-mac.sh --mode install"
   echo -e "--mode|-m - runmode (install, reinstall, start, stop)"
   echo -e "--number|-n - number of containers to start"
 }
