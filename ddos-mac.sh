@@ -55,6 +55,8 @@ function generate_compose {
 }
 
 function ripper_start {
+  docker pull nitupkcuf/ddos-ripper
+
   echo "Starting ripper attack"
   docker-compose up -d
 }
