@@ -3,6 +3,10 @@
 * restart - `bash ddos-mac.sh -m reinstall`
 * stop - `bash ddos-mac.sh -m stop`
 
+Params:
+* -m - mode
+* -n number of containers (if problem with process add -n 10)
+
 ##Windows
 `ddos.bat`
 

