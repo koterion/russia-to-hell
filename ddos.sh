@@ -14,13 +14,6 @@ function print_version {
   echo $VERSION
 }
 
-function check_dependencies {
-  if $(docker -v); then
-    echo "Please install docker first. https://www.docker.com/products/docker-desktop"
-    exit 1
-  fi
-}
-
 function check_params {
   if [ -z ${FILE+x} ]; then
     echo -e "Filename is unset, please specify filename for urls file"
@@ -76,7 +69,6 @@ while test -n "$1"; do
   shift
 done
 
-check_dependencies
 check_params
 
 case $MODE in
