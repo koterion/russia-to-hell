@@ -2,6 +2,8 @@
 # Ripper shell v1.0
 
 VERSION='1.0'
+FILE="resources.txt"
+MODE="reinstall"
 
 function print_help {
   echo -e "Usage: ddos.sh"
@@ -73,9 +75,6 @@ while test -n "$1"; do
   esac
   shift
 done
-
-FILE="resources.txt"
-MODE="install"
 
 check_dependencies
 check_params
