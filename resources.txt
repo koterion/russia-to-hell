@@ -51,3 +51,4 @@ https://bezformata.com
 https://api.developer.sber.ru/product/SberbankID
 https://api.sberbank.ru/prod/tokens/v2​/oauth
 https://api.sberbank.ru/prod/tokens/v2​/oidc
+https://shop-rt.com
