@@ -8,7 +8,7 @@ function print_help {
   echo -e "--number|-n - number of containers to start"
 }
 
-function start_script {
+function start {
   if [ -z "$amount" ]; then
       amount=300
       echo "Amount of containers not set, setting to $amount}"
