@@ -14,4 +14,4 @@
 `bash ddos.sh` or `bash ddos.sh 1000`
 
 ### Parameters:
-* -n - number of containers default 300
+* -n - number of connections default 300

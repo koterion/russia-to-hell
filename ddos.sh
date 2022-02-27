@@ -11,9 +11,9 @@ function print_help {
 function start {
   if [ -z "$amount" ]; then
       amount=300
-      echo "Amount of containers not set, setting to $amount}"
+      echo "Amount of connections not set, setting to $amount}"
   else
-    echo "Number of containers: $amount"
+    echo "Number of connections: $amount"
   fi
 
   while read -r site_url; do
