@@ -7,5 +7,5 @@
 `ddos.bat`
 
 ##Ubuntu
-
-`bash ddos.sh`
+`bash ddos.sh` or `bash ddos.sh 1000`
+1000 - number of connections
