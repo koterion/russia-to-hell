@@ -16,19 +16,10 @@ function start {
     echo "Number of connections: $amount"
   fi
 
-  if [ -z "$count" ]; then
-      count=1
-      echo "Amount of containers not set, setting to $count}"
-  else
-    echo "Number of connections: $count"
-  fi
-
   while read -r site_url; do
       if [ -n "$site_url" ]; then
           echo "Site: $site_url"
-          for (( c=1; c<=count; c++ )); do
-            docker run --platform linux/amd64 -d  alpine/bombardier -c $amount -d 60h -l "$site_url"
-          done
+          docker run --platform linux/amd64 -d  alpine/bombardier -c $amount -d 60h -l "$site_url"
       fi
   done < targets.txt
 }
@@ -36,13 +27,9 @@ function start {
 while test -n "$1"; do
   case "$1" in
     --number|-n)
-        amount=$2
-        shift
-        ;;
-    --count|-c)
-          count=$2
-          shift
-          ;;
+      amount=$2
+      shift
+      ;;
   *)
     echo "Unknown argument: $1"
     print_help

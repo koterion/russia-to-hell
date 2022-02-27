@@ -15,4 +15,3 @@
 
 ### Parameters:
 * -n - number of connections default 300
-* -c - number of containers for each site default 1
