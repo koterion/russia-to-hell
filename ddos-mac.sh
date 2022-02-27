@@ -39,10 +39,6 @@ function generate_compose {
 
     echo -e "version: '3'" > docker-compose.yml
     echo -e "services:" >> docker-compose.yml
-    echo -e "networks:" >> docker-compose.yml
-    echo -e "  default:" >> docker-compose.yml
-    echo -e "    external:" >> docker-compose.yml
-    echo -e "      name:bridge" >> docker-compose.yml
     counter=1
 
     while read -r site_url; do
@@ -52,6 +48,7 @@ function generate_compose {
                 echo -e "    image: nitupkcuf/ddos-ripper:latest" >> docker-compose.yml
                 echo -e "    restart: always" >> docker-compose.yml
                 echo -e "    command: $site_url" >> docker-compose.yml
+                echo -e "    network_mode: bridge" >> docker-compose.yml
                 ((counter++))
             fi
         fi
