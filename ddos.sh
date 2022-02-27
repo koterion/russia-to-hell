@@ -13,7 +13,7 @@ function print_version {
 }
 
 function check_dependencies {
-  if $(docker -v | grep "Docker"); then
+  if $(docker -v); then
     echo "Please install docker first. https://www.docker.com/products/docker-desktop"
     exit 1
   fi
@@ -66,11 +66,13 @@ while test -n "$1"; do
     shift
     ;;
   *)
-    FILE="resources.txt"
-    MODE="install"
-    shift
+    echo "Unknown argument: $1"
+    print_help
+    exit
     ;;
   esac
+  FILE="resources.txt"
+  MODE="install"
   shift
 done
 
