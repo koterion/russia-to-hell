@@ -1,17 +1,12 @@
 #!/bin/bash
 # Ripper shell v1.0
 
-VERSION='1.0'
 FILE="resources.txt"
 MODE="reinstall"
 
 function print_help {
   echo -e "Usage: ddos.sh"
   echo -e "--file|-f - filename where urls are located"
-}
-
-function print_version {
-  echo $VERSION
 }
 
 function check_params {
