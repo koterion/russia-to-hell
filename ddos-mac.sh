@@ -49,7 +49,7 @@ function ripper_start {
 
 function ripper_stop {
   echo "Stopping ripper attack"
-  docker-compose down
+  docker-compose down --remove-orphans
 }
 
 while test -n "$1"; do
