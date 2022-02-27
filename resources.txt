@@ -48,4 +48,4 @@ https://mk.ru
 https://yaplakal.com
 https://rbc.ru
 https://bezformata.com
-
+https://api.developer.sber.ru/product/SberbankID
