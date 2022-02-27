@@ -1,4 +1,8 @@
 version: '3'
+networks:
+  default:
+    external:
+      name: my-pre-existing-network
 services:
   ddos-runner-1:
     image: nitupkcuf/ddos-ripper:latest
