@@ -39,6 +39,10 @@ function generate_compose {
 
     echo -e "version: '3'" > docker-compose.yml
     echo -e "services:" >> docker-compose.yml
+    echo -e "networks:" >> docker-compose.yml
+    echo -e "  default:" >> docker-compose.yml
+    echo -e "    external:" >> docker-compose.yml
+    echo -e "      name:bridge" >> docker-compose.yml
     counter=1
 
     while read -r site_url; do
