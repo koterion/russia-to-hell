@@ -71,8 +71,8 @@ while test -n "$1"; do
     exit
     ;;
   esac
-  FILE="resources.txt"
-  MODE="install"
+  FILE=resources.txt
+  MODE=install
   shift
 done
 
