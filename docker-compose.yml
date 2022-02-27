@@ -1,8 +1,10 @@
 version: '3'
 networks:
   default:
-    external:
-      name: my-pre-existing-network
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.10.1.0/24
 services:
   ddos-runner-1:
     image: nitupkcuf/ddos-ripper:latest
