@@ -1,15 +1,17 @@
-##Mac:
+## Mac:
 * install - `bash ddos-mac.sh -m install`
 * restart - `bash ddos-mac.sh -m reinstall`
 * stop - `bash ddos-mac.sh -m stop`
 
-Params:
+### Parameters:
 * -m - mode
-* -n number of containers (if problem with process add -n 10)
+* -n - number of containers default 50 (if problem with process add -n 10)
 
-##Windows
+## Windows
 `ddos.bat`
 
-##Ubuntu
+## Ubuntu
 `bash ddos.sh` or `bash ddos.sh 1000`
-1000 - number of connections
+
+### Parameters:
+* -n - number of containers default 300

