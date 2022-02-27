@@ -71,10 +71,11 @@ while test -n "$1"; do
     exit
     ;;
   esac
-  FILE=resources.txt
-  MODE=install
   shift
 done
+
+FILE="resources.txt"
+MODE="install"
 
 check_dependencies
 check_params

