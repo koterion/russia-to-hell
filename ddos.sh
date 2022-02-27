@@ -1,7 +1,6 @@
 #!/bin/bash
 
-docker rm -f $(docker ps -a -q)
-docker rmi -f $(docker images -q)
+docker kill $(docker ps -q)
 
 IFS=$'\n' read -d '' -r -a lines < ./resources.txt
 
