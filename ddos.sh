@@ -66,13 +66,11 @@ while test -n "$1"; do
     shift
     ;;
   *)
-    echo "Unknown argument: $1"
-    print_help
-    exit
+    FILE="resources.txt"
+    MODE="install"
+    shift
     ;;
   esac
-  FILE="resources.txt"
-  MODE="install"
   shift
 done
 
