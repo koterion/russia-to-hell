@@ -1,4 +1,4 @@
-## Mac:
+## Mac/Ubuntu/Linux:
 * install - `bash ddos-unix.sh -m install`
 * restart - `bash ddos-unix.sh -m reinstall`
 * stop - `bash ddos-unix.sh -m stop`
@@ -9,9 +9,3 @@
 
 ## Windows
 `ddos.bat`
-
-## Ubuntu
-`bash ddos.sh` or `bash ddos.sh 1000`
-
-### Parameters:
-* -n - number of connections default 300
