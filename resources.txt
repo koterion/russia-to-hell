@@ -1,16 +1,10 @@
 http://www.gov.ru/
-https://www.moex.com
 https://dnronline.su/
-www.sberbank.ru
-stories-stat.online.sberbank.ru
-clickstream.online.sberbank.ru
-stat.online.sberbank.ru
 tinkoff.ru
 сdn-tinkoff.ru
 dp.tinkoff.ru
 acdn.tinkoff.ru
 id.tinkoff.ru
-http://www.fsb.ru/
 https://tass.ru/
 https://www.vbr.ru/
 https://www.gazprombank.ru
