@@ -1,7 +1,7 @@
 ## Mac/Ubuntu/Linux:
 * install - `bash ddos-unix.sh -m install`
 * restart - `bash ddos-unix.sh -m reinstall`
-* stop - `bash ddos-unix.sh -m stop`
+* stop - cntr + c and `bash ddos-unix.sh -m stop`
 
 ### Parameters:
 * -m - mode

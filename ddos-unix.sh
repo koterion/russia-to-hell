@@ -69,11 +69,28 @@ function generate_compose {
     done < resources.txt
 }
 
-function ripper_start {
-  docker pull nitupkcuf/ddos-ripper
+function updateDepend {
+    git pull origin master
+    docker pull nitupkcuf/ddos-ripper
+}
 
+function reinstall {
+  ripper_stop
+  check_vpn_status
+
+  updateDepend
+
+  generate_compose
+  ripper_start
+}
+
+function ripper_start {
   echo "Starting ripper attack"
   docker-compose up -d
+
+  sleep 1800
+
+  reinstall
 }
 
 function ripper_stop {
@@ -110,6 +127,7 @@ check_params
 case $MODE in
   install)
     check_vpn_status
+    updateDepend
     generate_compose
     ripper_start
     ;;
@@ -121,10 +139,7 @@ case $MODE in
     ripper_stop
     ;;
   reinstall)
-    ripper_stop
-    check_vpn_status
-    generate_compose
-    ripper_start
+    reinstall
     ;;
   *)
     echo "Wrong mode"
