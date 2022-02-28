@@ -9,3 +9,9 @@
 
 ## Windows
 `ddos.bat`
+
+## Require packages:
+* docker
+* docker-compose
+* python
+* vpn
