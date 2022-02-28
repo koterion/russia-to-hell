@@ -66,7 +66,7 @@ function generate_compose {
                 ((counter++))
             fi
         fi
-    done < targets.txt
+    done < resources.txt
 }
 
 function ripper_start {
@@ -106,8 +106,6 @@ done
 
 
 check_params
-
-curl --silent $TARGETS_URL --output targets.txt
 
 case $MODE in
   install)

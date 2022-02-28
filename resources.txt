@@ -1,7 +1,3 @@
 http://www.gov.ru/
-tinkoff.ru
-сdn-tinkoff.ru
-dp.tinkoff.ru
-acdn.tinkoff.ru
-id.tinkoff.ru
-mininform.gov.by
+https://www.moex.com
+https://dnronline.su/
