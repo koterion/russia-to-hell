@@ -1,7 +1,7 @@
 ## Mac:
-* install - `bash ddos-mac.sh -m install`
-* restart - `bash ddos-mac.sh -m reinstall`
-* stop - `bash ddos-mac.sh -m stop`
+* install - `bash ddos-unix.sh -m install`
+* restart - `bash ddos-unix.sh -m reinstall`
+* stop - `bash ddos-unix.sh -m stop`
 
 ### Parameters:
 * -m - mode
