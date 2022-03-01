@@ -1,4 +1,4 @@
 .idea
 targets.txt
 docker-compose.yml
-*.txt
+activeHosts.txt

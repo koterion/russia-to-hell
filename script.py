@@ -3,7 +3,7 @@ import os
 
 def myping(host):
     response = os.system("ping -c 1 " + host)
-    
+
     if response == 0:
         return True
     else:
@@ -28,7 +28,7 @@ with open('resources.txt') as f:
         if line:
             if myping(line):
                 live_urls.append(line)
-            
-with open('new_list.txt', 'w') as f:
+
+with open('activeHosts.txt', 'w') as f:
     for url in live_urls:
         f.write(url+'\n')
