@@ -20,3 +20,5 @@ intranet.homecredit.ru
 
 admin.gazprombank.ru
 gazprombank.ru
+
+interfax.ru
