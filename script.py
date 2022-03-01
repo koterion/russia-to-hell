@@ -1,5 +1,4 @@
 import requests
-import time
 import os
 
 def myping(host):
@@ -23,7 +22,9 @@ live_urls = []
 with open('resources.txt') as f:
     lines = f.readlines()
     for line in lines:
-        line = line.rstrip("\n").lstrip('https://')
+        line = line.replace("\n", '')
+        line = line.replace('https://', '')
+        line = line.replace('http://', '')
         if line:
             if myping(line):
                 live_urls.append(line)
