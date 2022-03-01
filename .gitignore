@@ -2,3 +2,4 @@
 targets.txt
 docker-compose.yml
 activeHosts.txt
+*.txt
