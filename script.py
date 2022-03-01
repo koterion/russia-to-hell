@@ -8,13 +8,11 @@ def myping(host):
     else:
         return False
 
-#open('resources.txt', 'wb').write(r.content)
-
 live_urls = []
-
-with open('resources.txt', 'r') as targets:
-    for line in targets.readlines():
-        line = line.replace('\n', '')
+with open('resources.txt') as f:
+    lines = f.readlines()
+    for line in lines:
+        line = line.replace("\n", '')
         line = line.replace('https://', '')
         line = line.replace('http://', '')
         if line:
