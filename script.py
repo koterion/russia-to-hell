@@ -1,7 +1,7 @@
 import requests
 import os
 def myping(host):
-    response = os.system("ping -c 1 " + host)
+    response = os.system("ping -c 1 -t 3 " + host)
 
     if response == 0:
         return True
